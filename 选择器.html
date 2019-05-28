@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style type="text/css">
+        .blue{
+            color:blue;
+        }
+
+        div{
+            height: 100px;
+            width: 100px;
+            backgroun-color:yellow:
+        }
+        #div6{
+            height:50px;
+            width:50px;
+            background-color:yellow;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(
+            function(){
+        //I.基本选择器
+                //1.id选择器
+                //$("#div1").css("color","red");
+                //2.元素选择器
+                //$("div").css("color","yellow");
+                //3.类选择器
+                //$(".blue").css("color","red");
+                //4.*选择器 body内所有div等
+                //$("*").css("color","green");
+                //5.多条件选择器
+                //$("#div1,#div2").css("color","red");
+        //II.层次选择器
+                //1.后代选择器
+                //$("#form1 div").css("color","red");
+                //2.子代选择器 只子代  孙代不包括
+                //$("#form1>div").css("background-color","red");
+                //3.next选择器 设置选择的后面的元素
+                //$("#div3+div").css("background-color","red");
+                //4.设置next后面所有同级元素
+                //$("#div3~div").css("background-color","red");
+
+            }
+        );
+        $(document).ready(
+                function () {
+                    //过滤器
+                    //$("div:first").css("background-color","green");
+                    //$("div:not('.blue')").css("background-color","green");
+                    //奇数偶读过滤器 :even  :odd
+                    //$("div:even").css("background-color","green");
+                    //:eq(索引序号） ：gt(索引序号)  :lt(索引序号) 选取等于，大于，小于索引序号的元素；
+                    //$("div:gt(3)").css("background-color","green");
+                    //组合上一条的 如   ：gt(0):lt(5)是从第1个元素到第6个元素；
+                    //$("div:gt(3):lt(5)").css("background-color","green");
+                    //slice(start,end) 设置下标范围内的元素
+                    //$("div").slice(1,4).css("background-color","green");
+                }
+        );
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div id="div1">div1</div>
+        <div id="div2" class="blue">div2</div>
+        <div id="div3" class="blue">div3</div>
+        <div id="div4">div4</div>
+        <div id="div5">
+            <spon>Hallo Jquery</spon>
+            <div id="div6">div6</div>
+        </div>
+    </form>
+</body>
+</html>
