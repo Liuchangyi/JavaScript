@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+          function(){
+              //第一种方法
+              function method1(){
+                  console.info("metheod1");
+              }
+              //调用函数
+              method1();
+              //第二种方法
+             var m1 = function method2(){
+                  console.info("metheod2");
+              }
+              //调用函数
+              m1();
+             //第三种方法
+              var m3 = new Function("console.info('method3');");
+              //调用函数
+              m3();
+          }
+        );
+    </script>
+</head>
+<body>
+
+</body>
+</html>
